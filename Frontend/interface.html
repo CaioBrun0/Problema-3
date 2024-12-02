@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscoPix</title>
+    <link rel="stylesheet" href="interface.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>BuscoPix</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Games</h2>
+        <a href="#" onclick="switchGame('cara-coroa')">Cara ou Coroa</a>
+        <a href="#" onclick="switchGame('boxe')">Boxe</a>
+        <a href="#" onclick="switchGame('futebol')">Futebol</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="imagemBack">
+        <div class="hero-section">
+            <h1>Bem-vindo ao BuscoPix</h1>
+            <p>Aposte em seus jogos favoritos com facilidade e segurança.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Div de Cara ou Coroa -->
+        <div id="cara-coroa" class="game-div">
+            <h2>Cara ou Coroa</h2>
+            <div class="cara-coroa-game"></div>
+            <button onclick="createRoom('cara-coroa')">Criar Sala</button>
+        </div>
+
+        <!-- Div de Boxe -->
+        <div id="boxe" class="game-div" style="display: none;">
+            <h2>Boxe</h2>
+            <div class="boxe-game"></div>
+            <button onclick="createRoom('boxe')">Criar Sala</button>
+        </div>
+
+        <!-- Div de Futebol -->
+        <div id="futebol" class="game-div" style="display: none;">
+            <h2>Futebol</h2>
+            <div class="futebol-game"></div>
+            <button onclick="createRoom('futebol')">Criar Sala</button>
+        </div>
+    </div>
+
+    <!-- Socket.IO e Script -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="interace.js"></script>
+</body>
+</html>

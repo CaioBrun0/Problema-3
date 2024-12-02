@@ -1,0 +1,164 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 15, 15);
+    color: white; /* Texto branco para contraste com o fundo escuro */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 58px;
+    left: 0;
+    background-color: maroon;
+    padding-top: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Hero Section */
+.imagemBack {
+    position: relative;
+    color: azure;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.imagemBack::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-section {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 24px;
+    margin: 10px 0 0 0;
+}
+
+/* Main Content */
+.main {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+/* Div de jogos */
+.game-div {
+    color: #f0f0f0;
+    display: none; /* Todas as divs de jogos começam ocultas */
+    background-color: #b3ff00; /* Fundo escuro para contraste */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Div ativa */
+.game-div.active {
+    display: block; /* Apenas a div ativa será exibida */
+}
+
+/* Botões dentro das divs de jogos */
+.game-div button {
+    background-color: maroon;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-div button:hover {
+    background-color: #a00000;
+}
+
+/* Botões para criar sala */
+.cara-coroa-game,
+.boxe-game,
+.futebol-game {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os botões de salas */
+}
+
+.cara-coroa-game button,
+.boxe-game button,
+.futebol-game button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #575757;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cara-coroa-game button:hover,
+.boxe-game button:hover,
+.futebol-game button:hover {
+    background-color: #444;
+    color: #f0f0f0;
+}
